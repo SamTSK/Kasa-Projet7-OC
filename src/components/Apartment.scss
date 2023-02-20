@@ -1,0 +1,23 @@
+@use "../scss/variables.scss" as *;
+
+.apartment {
+  background-image: linear-gradient(to top, $secondary-color, $primary-color);
+  border-radius: 1rem;
+  flex-basis: 30%;
+  display: flex;
+  align-items: end;
+  min-width: 15rem;
+  min-height: 15rem;
+  .apartment__title {
+    width: 50%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .apartment {
+    flex-basis: 100%;
+  }
+}

@@ -1,0 +1,44 @@
+import React from "react"
+import ReactDOM from "react-dom/client"
+// Mise en place router
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import App from "./App"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+
+
+const router = createBrowserRouter([
+  // path de base
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <h1>404 error not found</h1>,
+  },
+  {
+    path: "/flat",
+    element: (
+      <>
+        <Navbar />
+        <h1>Nos appartements</h1>
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/about",
+    element: (
+      <>
+        <Navbar />
+        <h1>A propos</h1>
+        <Footer />
+      </>
+    ),
+  },
+])
+
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+)

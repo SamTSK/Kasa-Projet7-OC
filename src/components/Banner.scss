@@ -1,0 +1,23 @@
+.banner {
+  position: relative;
+  background-image: url("../img/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  display: flex;
+  height: 221px;
+  margin: 0 2rem;
+  border-radius: 2rem;
+  align-items: center;
+  color: white;
+}
+.banner::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}

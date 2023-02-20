@@ -1,0 +1,23 @@
+@use "../scss/variables.scss" as *;
+
+.list {
+  display: flex;
+  /* height: 15rem; */
+  margin: 0 2rem;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  background-color: $list-background-color;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .list {
+    justify-content: center;
+    background-color: white;
+    padding: 0;
+  }
+}
