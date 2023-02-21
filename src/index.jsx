@@ -2,16 +2,15 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 // Mise en place router
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import App from "./App"
+import HomePage from "./pages/HomePage"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
-
 
 const router = createBrowserRouter([
   // path de base
   {
     path: "/",
-    element: <App />,
+    element: <HomePage />,
     errorElement: <h1>404 error not found</h1>,
   },
   {
