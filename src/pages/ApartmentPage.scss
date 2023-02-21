@@ -1,0 +1,54 @@
+@use "../scss/variables.scss" as *;
+
+.apartment__page {
+    color: $primary-color;
+    padding: 0 2rem;
+    h1 {
+        font-weight: 500;
+        line-height: 31.54px;
+        font-size: 36px;
+        margin-bottom: 1rem;
+    }
+    h2 {
+        font-weight: 500;
+        line-height: 25.67px;
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
+    img {
+        margin-top: 1rem;
+        width: 100%;
+        height: 21rem;
+        object-fit: cover;
+        border-radius: 25px
+    }
+    .apartment__title_author {
+        display: flex;
+        justify-content: space-between;
+        .apartement__author__badge {
+            width: 64px;
+            height: 64px;
+            background-color: #C4C4C4;
+            border-radius: 50%;
+        }
+        .apartment__author__details {
+            display: flex;
+        }
+    }
+    .apartment__tags {
+        display: flex;
+        gap: 1rem;
+        span {
+            background-color:  $primary-color;
+            color: white;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22.96px;
+            width: 111px;
+            height: 25px;
+            font-size: 14px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    }
+}

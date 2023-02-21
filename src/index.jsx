@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import ApartmentPage from "./pages/ApartmentPage"
 
 const router = createBrowserRouter([
   // path de base
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
-        <h1>Nos appartements</h1>
+        <ApartmentPage />
         <Footer />
       </>
     ),
