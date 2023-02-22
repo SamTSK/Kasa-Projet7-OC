@@ -15,6 +15,15 @@
         font-size: 18px;
         margin-bottom: 1rem;
     }
+    h3 {
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.67px;
+
+    }
     img {
         margin-top: 1rem;
         width: 100%;
@@ -25,6 +34,9 @@
     .apartment__title_author {
         display: flex;
         justify-content: space-between;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
         .apartement__author__badge {
             width: 64px;
             height: 64px;
@@ -33,7 +45,22 @@
         }
         .apartment__author__details {
             display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
+    }
+    .apartement__author{
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+    .bloc__stars {
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5rem;
     }
     .apartment__tags {
         display: flex;
@@ -49,6 +76,44 @@
             font-size: 14px;
             border-radius: 10px;
             text-align: center;
+        }
+    }
+    .apartement__description, .apartement__equipements {
+        .description, .equipements {
+            background-color: $primary-color;
+            color: white;
+            border-radius: 10px;
+            padding: 0.7em 0.5em;
+            height: 24px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            align-items: center;
+            i {
+                font-size: 1.7rem;
+            }
+        }
+        .content {
+            background-color: $content-background-color;
+            border-radius: 10px;
+            height: 249px;
+            padding: 1rem;
+            position: relative;
+            top: -1.5rem;
+            z-index: -1;
+        }
+    }
+    .apartement__equipements {
+        @media screen and (max-width: 768px){
+        margin-top: -3rem;}
+    }
+    .infos {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 2rem;
         }
     }
 }

@@ -19,35 +19,58 @@ function ApartmentPage() {
         </div>
         <div className="apartement__author">
           <div className="apartment__author__details">
-            <h3>Alexandre Dumas</h3>
+            <h3>
+              <span>Alexandre</span>
+              <span>Dumas</span>
+            </h3>
             <div className="apartement__author__badge"></div>
           </div>
           <div className="apartement__author__stars">
-            <span>☆</span>
-            <span>☆</span>
-            <span>☆</span>
-            <span>☆</span>
-            <span>☆</span>
+            <span className="bloc__stars">
+              <i className="fa-sharp fa-solid fa-star" />
+              <i className="fa-sharp fa-solid fa-star" />
+              <i className="fa-sharp fa-solid fa-star" />
+              <i
+                className="fa-sharp fa-solid fa-star"
+                style={{ color: "rgba(227, 227, 227, 1)" }}
+              />
+              <i
+                className="fa-sharp fa-solid fa-star"
+                style={{ color: "rgba(227, 227, 227, 1)" }}
+              />
+            </span>
           </div>
         </div>
       </div>
-      <div className="apartement__description">
-        <p>Description</p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae
-          fuga perferendis eum a atque provident architecto eius, neque ut ullam
-          aspernatur dignissimos eos cum voluptatum quo qui voluptatem, quisquam
-          quis.
-        </p>
-      </div>
-      <div className="apartement__equipements">
-        <p>Equipements</p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae
-          fuga perferendis eum a atque provident architecto eius, neque ut ullam
-          aspernatur dignissimos eos cum voluptatum quo qui voluptatem, quisquam
-          quis.
-        </p>
+      <div className="infos">
+        <div className="apartement__description">
+          <p className="description">
+            <span>Description</span>
+            <span>
+              <i className="fa-sharp fa-solid fa-chevron-up"></i>
+            </span>
+          </p>
+          <p className="content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae
+            fuga perferendis eum a atque provident architecto eius, neque ut
+            ullam aspernatur dignissimos eos cum voluptatum quo qui voluptatem,
+            quisquam quis.
+          </p>
+        </div>
+        <div className="apartement__equipements">
+          <p className="equipements">
+            <span>Equipements</span>
+            <span>
+              <i className="fa-sharp fa-solid fa-chevron-up"></i>
+            </span>
+          </p>
+          <p className="content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae
+            fuga perferendis eum a atque provident architecto eius, neque ut
+            ullam aspernatur dignissimos eos cum voluptatum quo qui voluptatem,
+            quisquam quis.
+          </p>
+        </div>
       </div>
     </div>
   )
