@@ -11,6 +11,8 @@
   },
   "plugins": ["react", "prettier"],
   "rules": {
-     "prettier/prettier": "error"
+     "prettier/prettier": "error", 
+     "react/no-unescaped-entities": 0,
+     "react/prop-types": "off"
   }
 }

@@ -1,0 +1,21 @@
+@use "../scss/variables.scss" as *;
+
+.error__page {
+    color: $primary-color;
+    text-align: center;
+    h1 {
+        font-size: 228px;
+        font-weight: 700;
+        margin-top: 4rem;
+    }
+    h2 {
+        font-size: 36px;
+        font-weight: 500;
+        Line-height: 410.69px;
+        margin-bottom: -7rem;
+        margin-top: -18rem;
+    }
+    a {
+        color: $primary-color;
+    }
+}

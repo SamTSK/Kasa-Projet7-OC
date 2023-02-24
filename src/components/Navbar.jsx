@@ -6,7 +6,11 @@ function Navbar() {
   return (
     <nav className="navbar">
       <NavLink to="/" className="navbar__logo">
-        <img src="./images/logo.png" alt="logo du site" />
+        <img
+          className="navbar__logo__img"
+          src="./images/logo.png"
+          alt="logo du site"
+        />
       </NavLink>
       <NavLink to="/" className="navbar__list__accueil">
         <div>Accueil</div>

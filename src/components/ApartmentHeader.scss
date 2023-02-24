@@ -1,0 +1,50 @@
+@use "../scss/variables.scss" as *;
+
+.apartment__title_author {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+    .apartement__author__badge {
+        width: 64px;
+        height: 64px;
+        background-color: #C4C4C4;
+        border-radius: 50%;
+    }
+    .apartment__author__details {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+.apartement__author{
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+.bloc__stars {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+.apartment__tags {
+    display: flex;
+    gap: 1rem;
+    span {
+        background-color:  $primary-color;
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22.96px;
+        width: 111px;
+        height: 25px;
+        font-size: 14px;
+        border-radius: 10px;
+        text-align: center;
+    }
+}

@@ -7,13 +7,14 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import ApartmentPage from "./pages/ApartmentPage"
 import About from "./pages/About"
+import { ErrorPage } from "./pages/ErrorPage"
 
 const router = createBrowserRouter([
   // path de base
   {
     path: "/",
     element: <HomePage />,
-    errorElement: <h1>404 error not found</h1>,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/flat",

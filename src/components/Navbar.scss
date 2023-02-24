@@ -8,7 +8,11 @@
   font-weight: 500;
   @media screen and (max-width: 768px){
     text-transform: uppercase;
-    /*font-size: 12px;*/
+    font-size: 12px;
+    margin: 20px 0;
+  }
+  &__list__propos {
+    white-space: nowrap;
   }
   & a {
     text-decoration: none;
@@ -22,11 +26,12 @@
   }
 }
 .navbar__logo {
+  &__img {
+    @media screen and (max-width: 768px) {
+      width: 50%;
+  }
+  }
   margin-right: auto;
-  /*@media screen and (max-width: 768px) {
-      height: 47px;
-      width: 145px;
-  }*/
 }
 
 /*.navbar__list {

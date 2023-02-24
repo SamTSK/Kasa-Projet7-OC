@@ -6,6 +6,7 @@ import PropTypes from "prop-types"
 function Apartment(props) {
   const {
     title,
+    imageUrl,
     /* pictures,
     id,
     cover,
@@ -19,6 +20,7 @@ function Apartment(props) {
   return (
     <div className="apartment">
       <Link to="/flat">
+        <img src={imageUrl} alt="" />
         <span className="apartment__title">{title}</span>
         {/* <span>{id}</span>
       <span>{cover}</span>
@@ -33,8 +35,9 @@ function Apartment(props) {
     </div>
   )
 }
-Apartment.PropTypes = {
+Apartment.propTypes = {
   title: PropTypes.string,
+  imageUrl: PropTypes.string,
   /* id: PropTypes.string,
   cover: PropTypes.string,
   pictures: PropTypes.string,
@@ -43,5 +46,9 @@ Apartment.PropTypes = {
   rating: PropTypes.string,
   location: PropTypes.string,
   equipments: PropTypes.string, */
+}
+Apartment.defaultProps = {
+  title: "",
+  imageUrl: "",
 }
 export default Apartment

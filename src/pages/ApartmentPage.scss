@@ -24,14 +24,18 @@
         line-height: 25.67px;
 
     }
-    img {
+    .infos__apropos {
+        display: flex;
+        gap: 2rem;
+    }
+    /*img {
         margin-top: 1rem;
         width: 100%;
         height: 21rem;
         object-fit: cover;
         border-radius: 25px
-    }
-    .apartment__title_author {
+    } */
+    /* .apartment__title_author {
         display: flex;
         justify-content: space-between;
         @media screen and (max-width: 768px) {
@@ -61,8 +65,8 @@
         display: flex;
         justify-content: space-between;
         margin-top: 1.5rem;
-    }
-    .apartment__tags {
+    } */
+    /*.apartment__tags {
         display: flex;
         gap: 1rem;
         span {
@@ -77,8 +81,8 @@
             border-radius: 10px;
             text-align: center;
         }
-    }
-    .apartement__description, .apartement__equipements {
+    } */
+   /* .description__section, .equipements__section {
         .description, .equipements {
             background-color: $primary-color;
             color: white;
@@ -115,5 +119,5 @@
             flex-direction: column;
             gap: 2rem;
         }
-    }
+    } */
 }
