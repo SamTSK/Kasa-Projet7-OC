@@ -8,7 +8,7 @@ function ApartmentList() {
 
   // useEffect(fecthApartments, []);
   // useEffect avec une array vide pour exécuter cette fonction au chargement du composant
-  
+
   /* function fecthApartments() {
     fetch("../data/logements.json")
     .then((res) => res.json())
@@ -22,6 +22,7 @@ function ApartmentList() {
         <Apartment
           title={logement.title}
           imageUrl={logement.cover}
+          id={logement.id}
           /* id={logement.id}
           cover={logement.cover}
           pictures={logement.pictures}

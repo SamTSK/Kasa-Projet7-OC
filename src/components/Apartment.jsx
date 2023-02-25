@@ -8,7 +8,6 @@ function Apartment(props) {
     title,
     imageUrl,
     /* pictures,
-    id,
     cover,
     description,
     host,
@@ -17,9 +16,10 @@ function Apartment(props) {
     equipments,
     tags, */
   } = props
+  const state = { apartmentId: props.id}
   return (
     <div className="apartment">
-      <Link to="/flat">
+      <Link to="/flat" state={state} >
         <img src={imageUrl} alt="" />
         <span className="apartment__title">{title}</span>
         {/* <span>{id}</span>
@@ -38,7 +38,8 @@ function Apartment(props) {
 Apartment.propTypes = {
   title: PropTypes.string,
   imageUrl: PropTypes.string,
-  /* id: PropTypes.string,
+  // id: PropTypes.string,
+  /* 
   cover: PropTypes.string,
   pictures: PropTypes.string,
   description: PropTypes.string,
@@ -50,5 +51,6 @@ Apartment.propTypes = {
 Apartment.defaultProps = {
   title: "",
   imageUrl: "",
+  // id: "",
 }
 export default Apartment
