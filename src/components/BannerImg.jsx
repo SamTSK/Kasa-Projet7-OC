@@ -1,10 +1,10 @@
 import React from "react"
 import "./BannerImg.scss"
 
-export function BannerImg() {
+export function BannerImg(props) {
   return (
     <div className="banner__img">
-      <img src="https://picsum.photos/800/400" alt="" />
+      <img src={props.imageUrl} alt="" />
     </div>
   )
 }

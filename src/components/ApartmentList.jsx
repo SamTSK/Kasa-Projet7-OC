@@ -1,20 +1,18 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./ApartmentList.scss"
 import Apartment from "./Apartment"
 import logements from "../data/logements.json"
 
 function ApartmentList() {
-  // const [apartments, setApartments] = useState([]);
+  const [apartments, setApartments] = useState([])
 
-  // useEffect(fecthApartments, []);
-  // useEffect avec une array vide pour exécuter cette fonction au chargement du composant
-
-  /* function fecthApartments() {
+  function fetchApartments() {
     fetch("../data/logements.json")
-    .then((res) => res.json())
-    .then((res) => setApartments(res))
-    .catch(console.error);
-  } */
+      .then((res) => res.json())
+      .then((res) => setApartments(res))
+      .catch(console.error)
+  }
+  useEffect(fetchApartments, [])
 
   return (
     <div className="list">
@@ -23,15 +21,6 @@ function ApartmentList() {
           title={logement.title}
           imageUrl={logement.cover}
           id={logement.id}
-          /* id={logement.id}
-          cover={logement.cover}
-          pictures={logement.pictures}
-          description={logement.description}
-          host={logement.host}
-          rating={logement.rating}
-          location={logement.location}
-          equipments={logement.equipments}
-          tags={logement.tags} */
         />
       ))}
     </div>

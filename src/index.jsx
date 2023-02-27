@@ -10,7 +10,6 @@ import About from "./pages/About"
 import { ErrorPage } from "./pages/ErrorPage"
 
 const router = createBrowserRouter([
-  // path de base
   {
     path: "/",
     element: <HomePage />,

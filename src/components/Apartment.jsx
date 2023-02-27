@@ -16,19 +16,22 @@ function Apartment(props) {
     equipments,
     tags, */
   } = props
-  const state = { apartmentId: props.id}
+  const state = {
+    logementId: props.id,
+  }
   return (
     <div className="apartment">
-      <Link to="/flat" state={state} >
+      <Link to="/flat" state={state}>
         <img src={imageUrl} alt="" />
         <span className="apartment__title">{title}</span>
+
         {/* <span>{id}</span>
       <span>{cover}</span>
       <img src={pictures} alt="images" />
       <span>{description}</span>
+      <span>{location}</span>
       <span>{host}</span>
       <span>{rating}</span>
-      <span>{location}</span>
       <span>{equipments}</span>
       <span>{tags}</span> */}
       </Link>
@@ -38,8 +41,8 @@ function Apartment(props) {
 Apartment.propTypes = {
   title: PropTypes.string,
   imageUrl: PropTypes.string,
-  // id: PropTypes.string,
   /* 
+  id: PropTypes.string,
   cover: PropTypes.string,
   pictures: PropTypes.string,
   description: PropTypes.string,

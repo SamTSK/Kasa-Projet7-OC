@@ -1,26 +1,33 @@
 import React from "react"
 import "./ApartmentHeader.scss"
 
-export function ApartmentHeader() {
+export function ApartmentHeader(props) {
+  const flat = props.flat
+  const name = flat.host.name
+  const [firtName, lastName] = name.split("")
+
   return (
     <div>
       <div className="apartment__title_author">
         <div className="apartment__title">
-          <h1>Cosy loft on the Canal Saint-Martin</h1>
-          <h2>Paris, île-de-France</h2>
+          <h1>{flat.title}</h1>
+          <h2>{flat.location}</h2>
           <div className="apartment__tags">
-            <span>Cozy</span>
+            {/* <span>Cozy</span>
             <span>Canal</span>
-            <span>Paris 10</span>
+            <span>Paris 10</span> */}
+            {flat.tags.map((tag) => (<span>{tag}</span>))}
           </div>
         </div>
         <div className="apartement__author">
           <div className="apartment__author__details">
             <h3>
-              <span>Alexandre</span>
-              <span>Dumas</span>
+              <span>{firtName}</span>
+              <span>{lastName}</span>
             </h3>
-            <div className="apartement__author__badge"></div>
+            <div className="apartement__author__badge">
+              <img src={flat.host.picture} alt="" />
+            </div>
           </div>
           <div className="apartement__author__stars">
             <span className="bloc__stars">
