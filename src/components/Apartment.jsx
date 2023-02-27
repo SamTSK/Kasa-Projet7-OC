@@ -7,6 +7,7 @@ function Apartment(props) {
   const {
     title,
     imageUrl,
+    id,
     /* pictures,
     cover,
     description,
@@ -17,7 +18,7 @@ function Apartment(props) {
     tags, */
   } = props
   const state = {
-    logementId: props.id,
+    apartmentId: { id },
   }
   return (
     <div className="apartment">
