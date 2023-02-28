@@ -20,8 +20,8 @@ function ApartmentPage() {
       <BannerImg imargeUrl={flat.cover} />
       <ApartmentHeader flat={flat} />
       <div className="infos__apropos">
-        <DescriptionSection />
-        <DescriptionSection />
+        <DescriptionSection title="Description" content={flat.description}/>
+        <DescriptionSection title="Equipements" content={flat.equipments.map(eq => <li>{eq}</li>)} />
       </div>
     </div>
   )

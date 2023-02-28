@@ -1,8 +1,8 @@
 @use "../scss/variables.scss" as *;
 
-.description__section, .equipements__section {
-    
-    .description, .equipements {
+.description__section {
+
+    .description {
         background-color: $primary-color;
         color: white;
         border-radius: 10px;
@@ -24,6 +24,7 @@
         position: relative;
         top: -1.5rem;
         z-index: -1;
+        list-style: none
     }
 }
 .apartement__equipements {
@@ -34,6 +35,8 @@
     display: flex;
     justify-content: space-between;
     gap: 3rem;
+    flex-direction: column;
+    flex-basis: 50%;
     @media screen and (max-width: 768px) {
         flex-direction: column;
         gap: 2rem;

@@ -2,8 +2,8 @@ import React from "react"
 import "./ApartmentHeader.scss"
 
 export function ApartmentHeader(props) {
-  const flat = props.flat
-  const name = flat.host.name
+  const { flat } = props
+  const { name } = flat.host
   const [firtName, lastName] = name.split(" ")
 
   return (
@@ -16,7 +16,9 @@ export function ApartmentHeader(props) {
             {/* <span>Cozy</span>
             <span>Canal</span>
             <span>Paris 10</span> */}
-            {flat.tags.map((tag) => (<span>{tag}</span>))}
+            {flat.tags.map((tag) => (
+              <span key={tag}>{tag}</span>
+            ))}
           </div>
         </div>
         <div className="apartement__author">
@@ -29,17 +31,19 @@ export function ApartmentHeader(props) {
               <img src={flat.host.picture} alt="" />
             </div>
           </div>
-          <div className="apartement__author__stars"> 
-                <span className="bloc__stars">
-                {[1, 2, 3, 4, 5].map((num)=> (
-                <span className={props.flat.rating >= num ? "on" : ""}><i className="fa-sharp fa-solid fa-star" /></span>
-                ))}
-              { /* <span className="on"><i className="fa-sharp fa-solid fa-star" /></span>
+          <div className="apartement__author__stars">
+            <span className="bloc__stars">
+              {[1, 2, 3, 4, 5].map((num) => (
+                <span key={num}className={props.flat.rating >= num ? "on" : ""}>
+                  <i className="fa-sharp fa-solid fa-star" />
+                </span>
+              ))}
+              {/* <span className="on"><i className="fa-sharp fa-solid fa-star" /></span>
                 <span className="on"><i className="fa-sharp fa-solid fa-star" /></span>
                 <span className="on"><i className="fa-sharp fa-solid fa-star" /></span>
                 <span><i className="fa-sharp fa-solid fa-star" /></span>
                 <span><i className="fa-sharp fa-solid fa-star" /></span> */}
-                </span>
+            </span>
           </div>
         </div>
       </div>
