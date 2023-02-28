@@ -18,7 +18,7 @@ function Apartment(props) {
     tags, */
   } = props
   const state = {
-    apartmentId: { id },
+    id,
   }
   return (
     <div className="apartment">

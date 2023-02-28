@@ -4,22 +4,16 @@ import { useLocation } from "react-router-dom"
 import { DescriptionSection } from "../components/DescriptionSection"
 import { BannerImg } from "../components/BannerImg"
 import { ApartmentHeader } from "../components/ApartmentHeader"
+import logements from "../data/logements.json"
 
 function ApartmentPage() {
-  const location = useLocation
+  const { state } = useLocation()
   const [flat, setFlat] = useState(null)
+  useEffect(() => {
+    setFlat(logements.find((logement) => logement.id === state.id))
+  }, [])
 
-  function fetchApartmentData() {
-    fetch("../data/logements.json")
-      .then((res) => res.json())
-      .then((flats) => {
-        const flat = flats.find((flat) => flat.id === location.state.logementId)
-        setFlat(flat)
-      })
-      .catch(console.error)
-  }
-  useEffect(fetchApartmentData, [])
-  if (flat == null) return <div>loading...</div> // pendant une petite demi seconde j'aurai un loading,parce qu'en haut la valeut de selected flat est null
+  if (flat == null) return <div>loading...</div> // pendant une petite demi-seconde j'aurai un loading,parce qu'en haut la valeut de selected flat est null
 
   return (
     <div className="apartment__page">
