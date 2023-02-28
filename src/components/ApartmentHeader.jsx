@@ -4,7 +4,7 @@ import "./ApartmentHeader.scss"
 export function ApartmentHeader(props) {
   const flat = props.flat
   const name = flat.host.name
-  const [firtName, lastName] = name.split("")
+  const [firtName, lastName] = name.split(" ")
 
   return (
     <div>
