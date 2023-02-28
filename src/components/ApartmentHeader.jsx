@@ -29,20 +29,17 @@ export function ApartmentHeader(props) {
               <img src={flat.host.picture} alt="" />
             </div>
           </div>
-          <div className="apartement__author__stars">
-            <span className="bloc__stars">
-              <i className="fa-sharp fa-solid fa-star" />
-              <i className="fa-sharp fa-solid fa-star" />
-              <i className="fa-sharp fa-solid fa-star" />
-              <i
-                className="fa-sharp fa-solid fa-star"
-                style={{ color: "rgba(227, 227, 227, 1)" }}
-              />
-              <i
-                className="fa-sharp fa-solid fa-star"
-                style={{ color: "rgba(227, 227, 227, 1)" }}
-              />
-            </span>
+          <div className="apartement__author__stars"> 
+                <span className="bloc__stars">
+                {[1, 2, 3, 4, 5].map((num)=> (
+                <span className={props.flat.rating >= num ? "on" : ""}><i className="fa-sharp fa-solid fa-star" /></span>
+                ))}
+              { /* <span className="on"><i className="fa-sharp fa-solid fa-star" /></span>
+                <span className="on"><i className="fa-sharp fa-solid fa-star" /></span>
+                <span className="on"><i className="fa-sharp fa-solid fa-star" /></span>
+                <span><i className="fa-sharp fa-solid fa-star" /></span>
+                <span><i className="fa-sharp fa-solid fa-star" /></span> */}
+                </span>
           </div>
         </div>
       </div>
