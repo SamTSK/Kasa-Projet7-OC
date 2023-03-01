@@ -17,11 +17,16 @@ function ApartmentPage() {
 
   return (
     <div className="apartment__page">
-      <BannerImg imargeUrl={flat.cover} />
+      <BannerImg imageUrl={flat.cover} />
       <ApartmentHeader flat={flat} />
       <div className="infos__apropos">
-        <DescriptionSection title="Description" content={flat.description}/>
-        <DescriptionSection title="Equipements" content={flat.equipments.map(eq => <li>{eq}</li>)} />
+        <DescriptionSection title="Description" content={flat.description} />
+        <DescriptionSection
+          title="Equipements"
+          content={flat.equipments.map((eq) => (
+            <li>{eq}</li>
+          ))}
+        />
       </div>
     </div>
   )

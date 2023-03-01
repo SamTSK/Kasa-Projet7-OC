@@ -42,8 +42,8 @@ function Apartment(props) {
 Apartment.propTypes = {
   title: PropTypes.string,
   imageUrl: PropTypes.string,
-  /* 
   id: PropTypes.string,
+  /* 
   cover: PropTypes.string,
   pictures: PropTypes.string,
   description: PropTypes.string,
@@ -55,6 +55,6 @@ Apartment.propTypes = {
 Apartment.defaultProps = {
   title: "",
   imageUrl: "",
-  // id: "",
+  id: "",
 }
 export default Apartment
