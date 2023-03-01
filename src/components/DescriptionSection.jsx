@@ -9,7 +9,6 @@ export function DescriptionSection(props) {
     setIsContentVisible(!isContentVisible)
   }
 
-
   return (
     <div className="infos">
       <div className="description__section">

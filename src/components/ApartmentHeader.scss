@@ -42,6 +42,10 @@
 .apartment__tags {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    @media screen and (max-width: 768px){
+        flex-wrap: nowrap;
+    }
     span {
         background-color:  $primary-color;
         color: white;

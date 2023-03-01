@@ -12,6 +12,7 @@
         justify-content: space-between;
         cursor: pointer;
         align-items: center;
+        //font-size: 24px;
         i {
             font-size: 1.7rem;
         }        
@@ -19,12 +20,13 @@
     .content {
         background-color: $content-background-color;
         border-radius: 10px;
-        height: 249px;
         padding: 1rem;
         position: relative;
         top: -1.5rem;
         z-index: -1;
         list-style: none;
+        color: $primary-color;
+        //font-size: 18px;
     }
 }
 
@@ -43,3 +45,4 @@
         gap: 2rem;
     }
 }
+

@@ -1,4 +1,12 @@
 .about__container {
     margin: 0 2rem;
     padding-inline: 4rem;
+    @media screen and (max-width: 768px) {
+        margin: 0;
+        padding-inline: 0;
+        margin-bottom: 2rem;
+    }
+}
+.about__container__body {
+    padding: 0 2rem;
 }

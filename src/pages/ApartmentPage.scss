@@ -6,14 +6,21 @@
     h1 {
         font-weight: 500;
         line-height: 31.54px;
-        font-size: 36px;
+        font-size: 27px;
         margin-bottom: 1rem;
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+            margin-top: 0.2rem;
+        }
     }
     h2 {
         font-weight: 500;
         line-height: 25.67px;
         font-size: 18px;
         margin-bottom: 1rem;
+        @media screen and (max-width: 768px){
+            font-size: 16px;
+        }
     }
     h3 {
         display: flex;
@@ -27,5 +34,11 @@
     .infos__apropos {
         display: flex;
         gap: 2rem;
+        @media screen and (max-width: 768px){
+            display: flex;
+            flex-direction: column;
+            gap: 0rem;
+            margin-top: -1.5rem;
+        }
     }
 }

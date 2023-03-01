@@ -2,10 +2,15 @@ import React from "react"
 import "./BannerImg.scss"
 
 export function BannerImg(props) {
+  // const imageUrl = props.imageUrl ? props.imageUrl : "https://picsum.photos/1920/1080"
+  const pictures = props.pictures
+
   return (
     <div className="banner__img">
-      <img src={props.imageUrl} alt="" />
-     {/* <img src="https://picsum.photos/200/300" alt="" /> */}
+      {/* <img src={imageUrl} alt="" /> */}
+      {pictures.map((pic) => (
+        <img key={pic} src={pic} alt="" />
+      ))}
     </div>
   )
 }
