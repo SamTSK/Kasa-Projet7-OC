@@ -4,11 +4,44 @@
     @media screen and (max-width: 768px) {
         margin-bottom: 0.8rem;
     }
-    margin-bottom: 2rem;
+
+    .btn {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        bottom: 0;
+        width: 5rem;
+        background-color: transparent;
+        color: white;
+        font-size: 3rem;
+        border-width: 0;
+        &:active, 
+        &:focus {
+            outline: none;
+        }
+        &.btn-next{
+            right: 0;
+        }
+        &.btn-previous {
+            left: 0;
+        }
+    }
     position: relative;
-    height: 19rem;
-    width: 100%;
+    .slide-counter {
+        position: absolute;
+        color: white;
+        border-radius: 0 0 0 1rem;
+        width: 100%;
+        text-align: center;
+        bottom: 1rem;
+
+
+    }
     .image__container {
+        margin-bottom: 2rem;
+        height: 19rem;
+        width: 100%;
+        position: relative;
         img {
             position: absolute;
             margin-top: 1rem;
@@ -18,10 +51,11 @@
             object-fit: cover;
             border-radius: 25px;
             opacity: 0;
+            transition: opacity 0.5s ease-in-out;
             &.show {
                 opacity: 1;
             }
-    }
+        }
     }
 }
 
