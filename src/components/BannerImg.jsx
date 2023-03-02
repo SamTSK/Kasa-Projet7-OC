@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import "./BannerImg.scss"
 
 export function BannerImg(props) {
-  //const imageUrl = props.imageUrl ? props.imageUrl : "https://picsum.photos/1920/1080"
-  const pictures = props.pictures
+  // const imageUrl = props.imageUrl ? props.imageUrl : "https://picsum.photos/1920/1080"
+  const { pictures } = props
   // Show picture
   const [currentPicture, setCurrentPicture] = useState(0)
   const getClassName = (i) => {
@@ -24,11 +24,11 @@ export function BannerImg(props) {
     setCurrentPicture(currentPicture - 1)
   }
 
-  //Default picture
+  // Default picture
   const arePicturesAvalable = () => {
     return pictures && pictures.length > 0
   }
- 
+
   const getCarouselOrDefaultImage = () => {
     if (!arePicturesAvalable()) {
       return <img src="./images/about-img.png" className="show" alt="" />
@@ -37,7 +37,6 @@ export function BannerImg(props) {
       <img key={pic} src={pic} alt="" className={getClassName(i)} />
     ))
   }
- 
 
   return (
     <div className="banner__img">
@@ -45,13 +44,13 @@ export function BannerImg(props) {
       {arePicturesAvalable() && (
         <>
           <button className="btn btn-previous" onClick={moveToPrevious}>
-            <i class="fa-solid fa-chevron-left" />
+            <i className="fa-solid fa-chevron-left" />
           </button>
           <span className="slide-counter">
-          {currentPicture +1} / {pictures.length}
+            {currentPicture + 1} / {pictures.length}
           </span>
           <button className="btn btn-next" onClick={moveToNext}>
-            <i class="fa-solid fa-chevron-right" />
+            <i className="fa-solid fa-chevron-right" />
           </button>
         </>
       )}

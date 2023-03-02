@@ -15,7 +15,9 @@ export function DescriptionSection(props) {
           <span>{props.title}</span>
           <span onClick={showContent}>
             <i
-               className={`fa-sharp fa-solid fa-chevron-up ${isContentVisible ? "isOpen" : ""}`} 
+              className={`fa-sharp fa-solid fa-chevron-up ${
+                isContentVisible ? "isOpen" : ""
+              }`}
             />
           </span>
         </p>
