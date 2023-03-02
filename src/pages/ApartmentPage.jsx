@@ -23,8 +23,8 @@ function ApartmentPage() {
         <DescriptionSection title="Description" content={flat.description} />
         <DescriptionSection
           title="Equipements"
-          content={flat.equipments.map((eq) => (
-            <li>{eq}</li>
+          content={flat.equipments.map((eq, i) => (
+            <li key={i}>{eq}</li>
           ))}
         />
       </div>

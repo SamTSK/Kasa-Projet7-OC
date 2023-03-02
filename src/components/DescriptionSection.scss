@@ -15,7 +15,12 @@
         //font-size: 24px;
         i {
             font-size: 1.7rem;
-        }        
+            transition: all 0.3s;
+            &.isOpen {
+                transform: rotate(180deg);
+             }
+        }
+
     }
     .content {
         background-color: $content-background-color;
@@ -45,4 +50,5 @@
         gap: 2rem;
     }
 }
+
 

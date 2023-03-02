@@ -4,7 +4,6 @@ import "./DescriptionSection.scss"
 export function DescriptionSection(props) {
   // Condition pour le dropdown
   const [isContentVisible, setIsContentVisible] = useState(false)
-
   const showContent = () => {
     setIsContentVisible(!isContentVisible)
   }
@@ -14,10 +13,9 @@ export function DescriptionSection(props) {
       <div className="description__section">
         <p className="description">
           <span>{props.title}</span>
-          <span>
+          <span onClick={showContent}>
             <i
-              className="fa-sharp fa-solid fa-chevron-up"
-              onClick={showContent}
+               className={`fa-sharp fa-solid fa-chevron-up ${isContentVisible ? "isOpen" : ""}`} 
             />
           </span>
         </p>
