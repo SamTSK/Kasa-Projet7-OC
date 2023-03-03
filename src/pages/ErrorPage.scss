@@ -7,13 +7,23 @@
         font-size: 228px;
         font-weight: 700;
         margin-top: 4rem;
+        @media screen and (max-width: 768px) {
+            font-size: 113px;
+            font-weight: 700;
+            margin-top: 10rem;
+        }
     }
     h2 {
         font-size: 36px;
         font-weight: 500;
-        Line-height: 410.69px;
+        line-height: 410.69px;
         margin-bottom: -7rem;
         margin-top: -18rem;
+        @media screen and (max-width: 768px) {
+            font-size: 17px;
+            margin-bottom: -6rem;
+            margin-top: -16rem;
+        }
     }
     a {
         color: $primary-color;

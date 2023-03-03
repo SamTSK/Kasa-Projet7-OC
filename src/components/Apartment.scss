@@ -4,6 +4,7 @@
   //background-image: linear-gradient(to top, $secondary-color, $primary-color);
   border-radius: 1rem;
   flex-basis: 30%;
+  box-shadow: 0 0 5px rgb(0 0 0 / 18%);
   min-width: 15rem;
   min-height: 15rem;
   position: relative;
@@ -15,12 +16,13 @@
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
   }
   .apartment__title {
-    width: 100%;
+    width: 89%;
     color: white;
     position: absolute;
     bottom: 20px;
     left: 20px;
     right: 20px;
+    font-size: 18px;
     
     position: absolute;
   }

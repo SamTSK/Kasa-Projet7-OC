@@ -34,10 +34,7 @@ export function ApartmentHeader(props) {
           <div className="apartement__author__stars">
             <span className="bloc__stars">
               {[1, 2, 3, 4, 5].map((num) => (
-                <span
-                  key={num}
-                  className={props.flat.rating >= num ? "on" : ""}
-                >
+                <span key={num} className={flat.rating >= num ? "on" : ""}>
                   <i className="fa-sharp fa-solid fa-star" />
                 </span>
               ))}

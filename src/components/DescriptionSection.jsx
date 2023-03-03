@@ -7,13 +7,13 @@ export function DescriptionSection(props) {
   const showContent = () => {
     setIsContentVisible(!isContentVisible)
   }
-
+  const { title, content } = props
   return (
     <div className="infos">
       <div className="description__section">
         <p className="description">
-          <span>{props.title}</span>
-          <span onClick={showContent}>
+          <span>{title}</span>
+          <span onClick={showContent} aria-hidden="true">
             <i
               className={`fa-sharp fa-solid fa-chevron-up ${
                 isContentVisible ? "isOpen" : ""
@@ -21,7 +21,7 @@ export function DescriptionSection(props) {
             />
           </span>
         </p>
-        {isContentVisible && <p className="content">{props.content}</p>}
+        {isContentVisible && <p className="content">{content}</p>}
       </div>
     </div>
   )

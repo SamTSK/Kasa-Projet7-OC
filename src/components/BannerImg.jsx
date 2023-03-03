@@ -25,9 +25,7 @@ export function BannerImg(props) {
   }
 
   // Default picture
-  const arePicturesAvalable = () => {
-    return pictures && pictures.length > 0
-  }
+  const arePicturesAvalable = () => pictures && pictures.length > 0
 
   const getCarouselOrDefaultImage = () => {
     if (!arePicturesAvalable()) {
@@ -43,13 +41,17 @@ export function BannerImg(props) {
       <div className="image__container">{getCarouselOrDefaultImage()}</div>
       {arePicturesAvalable() && (
         <>
-          <button className="btn btn-previous" onClick={moveToPrevious}>
+          <button
+            className="btn btn-previous"
+            type="button"
+            onClick={moveToPrevious}
+          >
             <i className="fa-solid fa-chevron-left" />
           </button>
           <span className="slide-counter">
             {currentPicture + 1} / {pictures.length}
           </span>
-          <button className="btn btn-next" onClick={moveToNext}>
+          <button className="btn btn-next" type="button" onClick={moveToNext}>
             <i className="fa-solid fa-chevron-right" />
           </button>
         </>
