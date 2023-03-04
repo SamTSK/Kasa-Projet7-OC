@@ -1,7 +1,7 @@
 import React from "react"
 import "./ApartmentList.scss"
-import Apartment from "./Apartment"
-import logements from "../data/logements.json"
+import Apartment from "../Apartment/Apartment"
+import logements from "../../data/logements.json"
 
 function ApartmentList() {
   return (

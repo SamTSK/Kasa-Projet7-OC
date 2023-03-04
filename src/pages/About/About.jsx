@@ -1,6 +1,6 @@
 import React from "react"
-import { DescriptionSection } from "../components/DescriptionSection"
-import BannerImg from "../components/BannerImg"
+import { DescriptionSection } from "../../components/DescriptionSection/DescriptionSection"
+import BannerImg from "../../components/BannerImg/BannerImg"
 import "./About.scss"
 
 function About() {

@@ -1,4 +1,4 @@
-@use "../scss/variables.scss" as *;
+@use "../../scss/variables.scss" as *;
 
 .banner__img {
     @media screen and (max-width: 768px) {
@@ -34,8 +34,6 @@
         width: 100%;
         text-align: center;
         bottom: 1rem;
-
-
     }
     .image__container {
         margin-bottom: 2rem;

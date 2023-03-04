@@ -21,7 +21,8 @@ export function DescriptionSection(props) {
             />
           </span>
         </p>
-        {isContentVisible && <p className="content">{content}</p>}
+        {isContentVisible && <p className="content">{content}</p>}{" "}
+        {/* le && va me vérifier si 2 conditions sont vrais */}
       </div>
     </div>
   )

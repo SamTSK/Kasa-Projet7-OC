@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
 import "./ApartmentPage.scss"
 import { useLocation } from "react-router-dom"
-import { DescriptionSection } from "../components/DescriptionSection"
-import { BannerImg } from "../components/BannerImg"
-import { ApartmentHeader } from "../components/ApartmentHeader"
-import logements from "../data/logements.json"
+import { DescriptionSection } from "../../components/DescriptionSection/DescriptionSection"
+import { BannerImg } from "../../components/BannerImg/BannerImg"
+import { ApartmentHeader } from "../../components/ApartmentHeader/ApartmentHeader"
+import logements from "../../data/logements.json"
 
 function ApartmentPage() {
   const { state } = useLocation()
@@ -13,7 +13,7 @@ function ApartmentPage() {
     setFlat(logements.find((logement) => logement.id === state.id))
   }, [])
 
-  if (flat == null) return <div>loading...</div> // pendant une petite demi-seconde j'aurai un loading,parce qu'en haut la valeut de selected flat est null
+  if (flat == null) return <div>loading...</div>
 
   return (
     <div className="apartment__page">
@@ -31,6 +31,5 @@ function ApartmentPage() {
     </div>
   )
 }
-// au lieu de mettre toute la sélection title, description,... j'ai préféré raccourcir avec flat = {flat}
 
 export default ApartmentPage

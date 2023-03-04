@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import Navbar from "../components/Navbar"
+import Navbar from "../../components/NavBar/Navbar"
 import "./ErrorPage.scss"
 
 export function ErrorPage() {
