@@ -11,7 +11,7 @@ Kasa est dans le métier de la location d’appartements entre particuliers depu
 
 ##  Mission
 
-- Implémenter le front end de Kasa.
+- Implémenter le front-end de Kasa.
 
 - Mettre en place des composants avec React et les routes de l'application avec React Router.
 
